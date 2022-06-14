@@ -2,7 +2,7 @@
 
 // let timeLine = gsap.timeline({ repeat: 1, yoyo: true })
 
-let timeLine = gsap.timeline({ defaults: { opacity: 0, ease: 'back' } })
+let timeLine = gsap.timeline({ defaults: { opacity: 0, ease: 'back(3)' } })
 
 function init() {
   timeLine
@@ -24,4 +24,26 @@ function init() {
 
 window.addEventListener('load', function () {
   init()
+})
+
+//Dynamic Text
+gsap.to('h3', {
+  text: 'typewriter effects with GSAP 3',
+  duration: 3,
+  ease: 'power1.in',
+  repeat: 10,
+  yoyo: true,
+  repeatDelay: 0.4,
+})
+
+//Gradient
+//cssgradient.io
+
+const tween = gsap.to('li', {
+  backgroundImage:
+    'linear-gradient(90deg, var(--left) 0%, var(--left) 100%, var(--right) 100%)',
+  stagger: {
+    each: 0.1,
+    ease: 'power2.out',
+  },
 })
