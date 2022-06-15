@@ -47,3 +47,13 @@ const tween = gsap.to('li', {
     ease: 'power2.out',
   },
 })
+
+// Slider sections
+gsap.to('.sections', {
+  x: '-=100vw',
+  repeat: 3,
+  repeatDelay: 0.8,
+  delay: 1,
+  repeatRefresh: true,
+})
+// gsap.to(".sections", {x:"-=100vw", repeat:document.querySelectorAll(".section").length-2, repeatDelay:0.5, delay:1, repeatRefresh:true})
